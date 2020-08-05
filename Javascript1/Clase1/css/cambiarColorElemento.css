@@ -1,0 +1,22 @@
+body {
+    background-color: #b8b8b8;
+    color: #555;
+    font-family: helvetica;
+    font-size: 1em;
+}
+
+button {
+    padding: 15px 35px;
+}
+
+h1 {
+    border-left: 12px sandybrown solid;
+    padding-left: 12px;
+}
+
+#caja {
+    width: 200px;
+    height: 200px;
+    background-color: #666;
+    margin-top: 25px;
+}
