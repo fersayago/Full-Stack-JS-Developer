@@ -19,7 +19,7 @@ function ocultar() {
     caja.style.display = 'none';
 }
 
-function mostrarocultar(){
+function mostrarOcultar(){
     if (caja.style.display == 'none') {
         caja.style.display = 'block';
     }
