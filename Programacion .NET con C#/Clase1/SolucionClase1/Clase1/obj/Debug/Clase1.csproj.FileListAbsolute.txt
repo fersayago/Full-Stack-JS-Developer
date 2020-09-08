@@ -1,0 +1,7 @@
+C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase1\SolucionClase1\Clase1\bin\Debug\Clase1.exe.config
+C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase1\SolucionClase1\Clase1\bin\Debug\Clase1.exe
+C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase1\SolucionClase1\Clase1\bin\Debug\Clase1.pdb
+C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase1\SolucionClase1\Clase1\obj\Debug\Clase1.csprojAssemblyReference.cache
+C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase1\SolucionClase1\Clase1\obj\Debug\Clase1.csproj.CoreCompileInputs.cache
+C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase1\SolucionClase1\Clase1\obj\Debug\Clase1.exe
+C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase1\SolucionClase1\Clase1\obj\Debug\Clase1.pdb
