@@ -10,19 +10,22 @@ namespace Clase1
     {
         static void Main (string[] args)
         {
+            //nota compartida
+            Alumno.NotaTP = 7;
             //crear objeto de la clase alumno
             Alumno objAlumno = new Alumno(); // se ejecuta el constructor de la clase
             objAlumno.Dni = 37242723;
             objAlumno.Apellido = "Sayago";
             objAlumno.Nombre = "Fernando";
             objAlumno.FechaNacimineto = Convert.ToDateTime("18/12/1992");
+            objAlumno.Nota = 8;
+
+            Console.WriteLine(objAlumno.TraerDatos());
 
             Console.WriteLine("Hola " + objAlumno.Apellido);
 
             //mostrar la edad
             Console.WriteLine("Edad {0} años", objAlumno.TraerEdad());
-
-            Console.WriteLine(objAlumno.TraerDatos());
 
             Console.WriteLine(objAlumno.TraerDatos("Sr."));
 
@@ -47,6 +50,9 @@ namespace Clase1
             Console.WriteLine(empleado.TraerDatos());
             Console.ReadKey();
 
+            Alumno alumno4 = new Alumno("Perez");
+            alumno4.Nombre = "Gabriel";
+            alumno4.Nota = 9;
         }
 
         static void Imprimir()

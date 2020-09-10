@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clase1
+namespace Datos
 {
-    // se marca con : que Empleado herede de Persona.
-    sealed class Empleado :Persona
+    public class Class1
     {
-
     }
 }

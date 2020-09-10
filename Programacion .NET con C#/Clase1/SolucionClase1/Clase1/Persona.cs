@@ -6,13 +6,18 @@ using System.Threading.Tasks;
 
 namespace Clase1
 {
-    class Persona
+    abstract class Persona
     {
         //constructor
         public Persona()
         {
             //codigo a ejecutarse por cada new (cada instancia)
             Apellido = "Sosa";
+        }
+
+        public Persona (string ape)
+        {
+            Apellido = ape;
         }
 
 
@@ -66,7 +71,7 @@ namespace Clase1
         }
 
         // metodo TraerDatos()
-        public string TraerDatos()
+        public virtual string TraerDatos()
         {
             string strDatos;
             strDatos = "Doc.: " + Dni + " " + Apellido + ", " + Nombre;
@@ -79,6 +84,11 @@ namespace Clase1
             string strDatos;
             strDatos = Titulo + " " + Apellido + ", " + Nombre;
             return strDatos;
+        }
+
+        public virtual string TraerDatos(bool a)
+        {
+            return "metodo en construccion";
         }
     }
 }

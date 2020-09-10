@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clase1
+namespace PresentacionConsola
 {
-    // se marca con : que Empleado herede de Persona.
-    sealed class Empleado :Persona
+    class Program
     {
-
+        static void Main(string[] args)
+        {
+        }
     }
 }
