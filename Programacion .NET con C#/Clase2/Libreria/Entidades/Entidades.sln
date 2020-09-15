@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentacionConsola", "Pres
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{F963BD75-8D01-45E4-8FC4-607AFB3E8956}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinBiblioteca", "WinBiblioteca\WinBiblioteca.csproj", "{9A9202A1-7C6B-4CBD-BCF1-795F084759A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F963BD75-8D01-45E4-8FC4-607AFB3E8956}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F963BD75-8D01-45E4-8FC4-607AFB3E8956}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F963BD75-8D01-45E4-8FC4-607AFB3E8956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A9202A1-7C6B-4CBD-BCF1-795F084759A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A9202A1-7C6B-4CBD-BCF1-795F084759A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A9202A1-7C6B-4CBD-BCF1-795F084759A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A9202A1-7C6B-4CBD-BCF1-795F084759A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
