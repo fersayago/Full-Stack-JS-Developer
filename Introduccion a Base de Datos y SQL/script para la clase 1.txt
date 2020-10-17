@@ -1,0 +1,117 @@
+-- -------------------------------------------------------------------------------
+-- COMANDOS BASE DE DATOS
+-- -------------------------------------------------------------------------------
+
+-- Crear una base con la que estaremos trabajando
+CREATE DATABASE ComercioIT DEFAULT CHARSET utf8;
+
+-- Crear una base temporal
+CREATE DATABASE Prueba DEFAULT CHARSET utf8;
+
+-- Mostrar las bases de dato
+SHOW DATABASES;
+
+-- Eliminar una base de datos
+DROP DATABASE Prueba;
+
+-- Crear un usuario 
+CREATE USER 'alejandro'@'localhost' IDENTIFIED BY '12345';
+
+-- Asignar TODOS los privilegios y refrescar los privilegios
+GRANT ALL PRIVILEGES ON ComercioIT.* TO 'alejandro'@'localhost';
+FLUSH PRIVILEGES;
+
+-- -------------------------------------------------------------------------------
+-- COMANDOS TABLAS
+-- -------------------------------------------------------------------------------
+
+-- Seleccionar la base a operar
+USE ComercioIT;
+
+-- Crear Tabla
+CREATE TABLE Productos (
+        idProducto INT(11) NOT NULL AUTO_INCREMENT,
+        Nombre VARCHAR(30) NOT NULL ,
+        Precio DOUBLE NOT NULL ,
+        Marca VARCHAR(20) NOT NULL ,
+        Categoria VARCHAR(20),
+        Presentacion VARCHAR(30),
+        Stock INT(6),
+        PRIMARY KEY (idProducto)
+) CHARSET utf8;
+
+-- Mostrar las tablas
+SHOW TABLES;
+
+-- Ver la estructura de la tabla
+DESC Productos;
+
+-- Como fue creada en SQL una Tabla
+SHOW CREATE TABLE Productos;
+
+-- Alterar una tabla (Cambiar Nombre de Campo)
+ALTER TABLE Productos CHANGE Categoria Rubro INT(10) NOT NULL;
+
+-- Alterar una tabla (Agregar un Nuevo Campo)
+ALTER TABLE Productos ADD Origen VARCHAR(15) NOT NULL DEFAULT 'Argentina' AFTER Presentacion;
+
+-- Alterar una tabla (Eliminar un Campo)
+ALTER TABLE Productos DROP Origen;
+
+-- Eliminar una Tabla
+DROP TABLE Productos;
+DROP TABLE IF EXISTS Productos;
+
+-- -------------------------------------------------------------------------------
+-- RESTRICCIONES DE LAS TABLAS
+-- -------------------------------------------------------------------------------
+
+CREATE TABLE Clientes(
+        TipoDoc ENUM('DNI','LC','LE','OTRO'),
+        NumeroDoc VARCHAR(9) NOT NULL ,
+        Nombre VARCHAR(60) NOT NULL ,
+	Mascotas INT NULL
+	Edad INT UNSIGNED
+        PRIMARY KEY (TipoDoc,NumeroDoc)
+) CHARSET utf8;
+
+-- -------------------------------------------------------------------------------
+-- PRACTICA
+-- -------------------------------------------------------------------------------
+
+-- Ejercicio 1
+
+CREATE TABLE Facturas(
+	
+letra char(1),
+	
+numero integer,
+
+	fecha date,
+
+	monto double,
+
+	primary key (letra,numero)
+
+);
+
+-- Ejercicio 2
+
+CREATE TABLE Articulos(
+	
+codigo integer,
+	
+nombre varchar(50),
+
+	precio double,
+
+	stock integer,
+
+	primary key (codigo)
+
+);
+
+SHOW TABLE;
+
+DESCRIBE Facturas;
+DESCRIBE Articulos;
