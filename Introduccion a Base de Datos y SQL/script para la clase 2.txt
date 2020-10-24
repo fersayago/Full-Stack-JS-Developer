@@ -1,5 +1,3 @@
-Use comercioitsabtarde;
-
 -- creamos la tabla clientes
 
 
@@ -49,19 +47,19 @@ SELECT * FROM clientes;
 -- Insert de valores NULL
 -- ----------------------------------------------------------------------------------------
 
--- Error
+--Error
 INSERT INTO clientes (nombre,apellido,cuit,direccion) VALUES (NULL,'Veron','xxxxx','Estados Unidos 1223');
 
 
--- Corregido
+--Corregido
 INSERT INTO clientes (nombre,apellido,cuit,direccion) VALUES ('Juan','Veron','xxxxx','Estados Unidos 1223');
 
 
--- Direccion si acepta NULL
+--Direccion si acepta NULL
 INSERT INTO clientes (nombre,apellido,cuit,direccion) VALUES ('Pablo','Aimar','xxxxx',NULL);
 
 
--- Ejemplo de cadena sin caracteres
+--Ejemplo de cadena sin caracteres
 INSERT INTO clientes (nombre,apellido,cuit,direccion) VALUES ('Claudio','Caniggia','xxxxx','');
 
 
@@ -85,7 +83,6 @@ SELECT nombre,apellido FROM clientes;
 -- Saludar a todos los clientes (operaciones en los campos + alias)
 SELECT 'Hola', nombre,apellido FROM clientes;
 SELECT 'Hola', CONCAT(nombre,' ',apellido) FROM clientes;
--- El "AS Saludo" funciona como alias para el nombre de la columna
 SELECT CONCAT('Hola ',nombre,' ',apellido) AS Saludo FROM clientes;
 
 -- Seleccionar solo nombre y apellido de los clientes con nombre Javier
