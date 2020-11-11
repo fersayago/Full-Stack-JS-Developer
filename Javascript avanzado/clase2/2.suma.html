@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Fer</title>
+    <style>
+      main {
+        margin-left: 30em;
+        margin-right: 30em;
+        margin-top: 5em;
+      }
+
+      input,
+      button {
+        width: 100%;
+        margin-bottom: 1em;
+      }
+
+      header {
+        border: 1px solid black;
+        padding: 3em;
+        text-align: center;
+        background-color: lightgray;
+      }
+    </style>
+
+    <script>
+        function sumar() {
+            //hago getElementById de num1 y num2
+            //sumo los .value en una variable
+            //pongo el resultado en el div resultado con innerHTML
+
+            var num1 = document.getElementById("num1")
+            var num2 = document.getElementById("num2")
+
+            var suma = parseInt(num1.value) + parseInt(num2.value);
+
+            document.getElementById("resultado").innerHTML = suma;
+        }
+        
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1>Calculadora</h1>
+    </header>
+    <div>
+      <input type="number" id="num1" placeholder="Ingrese un numero" />
+      <input type="number" id="num2" placeholder="Ingrese un numero" />
+
+      <button type="button" onclick="sumar()">Sumar</button>
+    </div>
+
+    <hr />
+
+    <div id="resultado">Presione sumar para ver el resultado de la suma</div>
+  </body>
+</html>

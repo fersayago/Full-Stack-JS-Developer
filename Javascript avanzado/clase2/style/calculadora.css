@@ -1,0 +1,24 @@
+main {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    border: 1px solid;
+    padding: 1em;
+    border-radius: 5px;
+    background-color: rgb(168, 224, 243);
+}
+
+input {
+    width: 100%;
+}
+
+#operaciones {
+    background-color: lightblue;
+    padding: 0.5em;
+}
+
+#operaciones button {
+    width: 18%;
+    padding: 0.5em;
+    margin-top: 1em;
+}
