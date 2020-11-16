@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encuesta</title>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="jumbotron text-center">
+      <h1>Curso Javascript</h1>
+      <h2>Clase 3: Formularios</h2>
+    </header>
+    <main class="container grey">
+      <form method="post" id="encuesta" onsubmit="enviarDatosAlServidor(event)">
+        <fieldset>
+          <legend>Encuesta de satisfaccion</legend>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              name="nombre"
+              id="txtNombre"
+              class="form-control"
+            />
+            <div id="valNombre" class="text-danger text-right"></div>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input
+              type="text"
+              name="apellido"
+              id="txtApellido"
+              class="form-control"
+            />
+            <div id="valApellido" class="text-danger text-right"></div>
+          </div>
+          <div class="form-group">
+            <label for="correo">Correo Electronico</label>
+            <input
+              type="text"
+              name="correo"
+              id="txtCorreo"
+              class="form-control"
+            />
+            <div id="valCorreo" class="text-danger text-right"></div>
+          </div>
+          <div class="form-group">
+            <label for="celular">Telefono Celular</label>
+            <input
+              type="text"
+              name="celular"
+              id="txtCelular"
+              class="form-control"
+            />
+            <div id="valCelular" class="text-danger text-right"></div>
+          </div>
+          <button class="btn btn-primary btn-block">Enviar Datos</button>
+        </fieldset>
+      </form>
+    </main>
+    <script src="/clase3/JS/encuesta.js"></script>
+  </body>
+</html>
