@@ -9,18 +9,20 @@
       #dropTarget{
         background-color: lightgray;
         border: 1px solid;
-        height: 7em;
         text-align: center;
+        vertical-align: center;
         border-radius: 10px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        width: 40%;
       }
     </style>
   </head>
-  <body>
+  <body onload="init()">
     <img id="imagen" src="cafe.jpg" alt="cafe servido" />
     <button type="button" onclick="cargarImagen()">
-      Cargar imagen por Ajax
+      Cargar lorem picsum por Ajax
     </button>
-    <pre id="result"></pre>
     <div id="dropTarget">
       Arrastre aqui su imagen...
     </div>
