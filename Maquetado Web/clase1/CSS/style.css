@@ -1,0 +1,42 @@
+h1 {
+  font-family: 'mifuente-h1';
+}
+
+h2 {
+  color: blue;
+  font-family: 'Langar', cursive;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  color: rebeccapurple;
+  font-size: 1.5em;
+}
+
+
+/*
+  DEFINIR FUENTE CON @FONT-FACE 
+*/
+
+@font-face {
+  src: url('../font/NostalgiaFont/NostalgiaScript-Regular.otf') , url('../font/NostalgiaFont/NostalgiaScript-Regular.ttf');
+  font-family: mifuente-h1;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url('');
+  font-family: mifuente-h3;
+  font-weight: bold;
+}
+
+@font-face {
+  src: url('');
+  font-family: mifuente-h4;
+  font-weight: bold;
+}
+
+/* se pueden conseguir fonts desde dafont.com al bajar el zip */
