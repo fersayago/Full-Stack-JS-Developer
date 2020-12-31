@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+    <style>
+      div {
+        padding: 4em;
+      }
+      #interno {
+        background-color: pink;
+      }
+
+      #medio {
+        background-color: tomato;
+      }
+
+      #externo {
+        background-color: red;
+      }
+    </style>
+    <script>
+      function init() {
+        let interno = document.getElementById("interno");
+        let externo = document.getElementById("externo");
+        let medio = document.getElementById("medio");
+
+        //primero Fase de Captura
+        //Parametro addEventListener en true
+        //Desde la pantalla hacia mi
+        interno.addEventListener("click", function () {
+          console.log("Div interno registra un click");
+        }, true);
+
+        medio.addEventListener("click", function () {
+          console.info("Div medio registra un click");
+        }, true);
+        
+        //Segundo fase de burbujeo
+        //De mi a la pantalla
+        //termina el document
+        externo.addEventListener("click", function () {
+          console.error("Div externo registra un click");
+        }, false);
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    <div id="externo">
+      <div id="medio">
+        <div id="interno">Haz click en cualquier div</div>
+      </div>
+    </div>
+  </body>
+</html>

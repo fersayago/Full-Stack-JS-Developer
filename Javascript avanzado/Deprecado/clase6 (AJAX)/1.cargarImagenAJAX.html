@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="JS/1.js"></script>
+    <style>
+      #dropTarget{
+        background-color: lightgray;
+        border: 1px solid;
+        text-align: center;
+        vertical-align: center;
+        border-radius: 10px;
+        padding-bottom: 20px;
+        padding-top: 20px;
+        width: 40%;
+      }
+    </style>
+  </head>
+  <body onload="init()">
+    <img id="imagen" src="cafe.jpg" alt="cafe servido" />
+    <button type="button" onclick="cargarImagen()">
+      Cargar lorem picsum por Ajax
+    </button>
+    <div id="dropTarget">
+      Arrastre aqui su imagen...
+    </div>
+  </body>
+</html>

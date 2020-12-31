@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/calculadora.css" />
+    <title>Super calculadora</title>
+
+    <script>
+      function agregarNumero() {
+        //el this es el boton en el que hicieron click para triggerear la funcion
+        let valor = document.getElementById("numero").value;
+        document.getElementById("numero").value = valor + this.value;
+      }
+
+      var ultimoOperador = "=";
+      var ultimoNumero = 0;
+
+      function operador(sender) {
+        //TODO: arreglar operadores de la calculadora
+        let numeroActual = parseInt(document.getElementById("numero").value);
+        let operad = sender.target.value;
+
+        if (operad=="="){
+            let resultado = ultimoNumero;
+            if (ultimoOperador=="+"){
+                resultado = ultimoNumero + numeroActual;
+            }
+            if (ultimoOperador=="-"){
+                resultado = ultimoNumero - numeroActual;
+            }
+            if (ultimoOperador=="*"){
+                resultado = ultimoNumero * numeroActual;
+            }
+            if (ultimoOperador=="/"){
+                resultado = ultimoNumero / numeroActual;
+            }
+
+            document.getElementById("numero").value = resultado;
+
+        } else {
+            ultimoNumero = numeroActual;
+            ultimoOperador = operad;
+            document.getElementById("numero").value = "";
+
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+        <div style="margin: 0.5em">CASIO</div>
+      <div>
+        <input type="number" id="numero" />
+      </div>
+
+      <div id="botoneraNumeros"></div>
+
+      <script>
+        let botonera = document.getElementById("botoneraNumeros");
+        for (let i = 1; i < 10; i++) {
+          let boton = document.createElement("button");
+          boton.value = i;
+          boton.innerHTML = i;
+          boton.style.width = "30%";
+          boton.style.margin = "0.5em";
+          boton.onclick = agregarNumero;
+          botonera.appendChild(boton);
+        }
+
+        let boton = document.createElement("button");
+        boton.value = 0;
+        boton.innerHTML = 0;
+        boton.style.width = "30%";
+        boton.style.margin = "0.5em";
+        //de esta manera carga el this
+        boton.onclick = agregarNumero;
+        botonera.appendChild(boton);
+      </script>
+
+      <div id="operaciones">
+        <!-- de esta manera no carga el this -->
+        <!-- event especifica los datos del evento. Cambia la forma en la que lo asociamos-->
+        <button onclick="operador(event)" value="+">+</button>
+        <button onclick="operador(event)" value="-">-</button>
+        <button onclick="operador(event)" value="*">*</button>
+        <button onclick="operador(event)" value="/">/</button>
+        <button onclick="operador(event)" value="=">=</button>
+      </div>
+    </main>
+  </body>
+</html>
