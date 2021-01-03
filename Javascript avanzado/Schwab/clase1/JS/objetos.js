@@ -19,8 +19,6 @@ data["clima"] = "soleado"
 
 
 // caso real de uso de notación de corchetes
-var entrada = "dia";
-
 function buscar (propiedadAMostrar){
   console.log( data.propiedadAMostrar); // undefined
   console.log( data[propiedadAMostrar]); // si se invoca dia = "lunes"
