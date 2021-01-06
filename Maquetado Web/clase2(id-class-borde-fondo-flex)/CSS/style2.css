@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  color: white;
+}
+
+h1, p, h3 {
+  margin: 0;
+}
+
+header {
+  background-color: #555;
+  width: 100%;
+  height: 150px;
+  /* PARA OCULTAR Y ELIMINAR EL ESPACIO:
+  display: none;
+  PARA OCULTAR Y DEJAR EL ESPACIO:
+  visibility: hidden; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+header #encabezado{
+  /* border: 1px solid yellow; */
+  width: 35%;
+}
+
+header #redes-sociales{
+  /* border: 1px solid cyan; */
+  width: 15%;
+  /* Para posicinar el elemento lo mas a la derecha posible: */
+  margin-left: auto;
+  align-self: flex-start;
+}
+
+#redes-sociales img {
+  width: 35px;
+  height: 35px;
+  margin-top: 20px;
+  margin-right: 5px;
+}
+
+h1{
+  text-shadow: 2px 2px 2px gold;
+  color: #111;
+  font-size: 50px;
+}
+
+main {
+  width: 100%;
+  background-color: #689;
+  /* height: 200px; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+#contacto {
+  width: 100%;
+  background-color: green;
+}
+
+section {
+  /* border: 1px dashed orange; */
+  width: 30%;
+  background-color: #943;
+  /* height: 175px; */
+  padding: 20px;
+  /* OCULTAR EL CONTENIDO QUE REBALSA: */
+  overflow: hidden;
+}
+
+footer {
+  background-color: purple;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+nav, nav div{
+  width: 100%;
+  height: 40px;
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav div{
+  /* border: 1px solid gold; */
+  width: 60%;
+  justify-content: space-evenly;
+}
+
+nav a {
+  /* border: 1px solid yellow; */
+  background-color: cornflowerblue;
+  width: 100px; 
+  height: 30px;
+  /* REEMPLAZADO POR display: flex EN NAV
+  display: inline-block; */
+  text-align: center;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-variant: small-caps;
+  border-radius: 10px;
+}

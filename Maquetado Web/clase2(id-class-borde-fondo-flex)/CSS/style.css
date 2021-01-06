@@ -1,0 +1,76 @@
+/* LAS CAJAS SE VEN DEL MISMO TAMAÑO AUNQUE UNA TENGA PADDING */
+*{
+  box-sizing: border-box;
+  /* valor de fabrica = content-box*/
+}
+
+/* reseteamos el margin por defecto de 8 */
+body {
+  margin: 0;
+}
+
+/* ---------------------------------------------------------*/
+/* JERARQUIA DE SELECTORES CSS: ID > class > Etiqueta (div) */
+/* ---------------------------------------------------------*/
+
+#caja1 {
+  /* shorcut = BGC */
+  background-color: orange;
+  
+  padding: 20px;
+
+  /* MODIFICACIONES DEL BORDER */
+
+  border-style: ridge dashed; /* TB LR */
+  border-width: 10px 20px 10px; /* T LR B */
+  border-color: orangered greenyellow yellow lightcoral; /* T R B L */
+  /*   Short hand de Border   */
+  /* border: 10px dotted red; */
+  border-left: 15px double violet;
+}
+
+#caja2{
+  color: cyan;
+
+  /* PROPIEDADES DE FONDO */
+  background-color: navy;
+  background-image: url('https://cdn3.iconfinder.com/data/icons/logos-brands-3/24/logo_brand_brands_logos_linux-512.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-attachment: scroll;
+  /* Ocupar el 100% del alto y el ancho de la caja contenedora: */
+  background-size: 100% 100%;
+
+  /*             Short hand de background             */
+  /* backgroud: red url('#') no-repeat center scroll; */
+}
+
+#caja3{
+
+  /* PROPIEDADES DE FONDO MULTIPLE */
+  background-color: cornflowerblue;
+  background-image: url('../IMG/bicho.png'), url('../IMG/girasol.png'), url('../IMG/arcoiris.png');
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: 200px 150px, center, center; 
+  background-size: 4em, 300px, 100%;
+
+  /* Short hand de background con fondos multiples */
+  /* background: url('1.png') no-repeat 200px 150px,
+                 url('2.png') no-repeat center,
+                 url('3.png') no-repeat center,
+                 orange;
+  */
+}
+
+.grande {
+  width: 600px;
+  height: 600px;
+}
+
+div {
+  width: 300px;
+  height: 300px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 20px;
+}
