@@ -1,0 +1,64 @@
+*{
+  /* PROBAMOS EL BOX SIZING BORDER-BOX */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#caja-roja {
+  background: red;
+  color: yellow;
+  height: 200px;
+  width: 30%;
+  /* la caja va a flotar a la derecha */
+  float: left;
+  padding: 30px;
+  /* previene que el texto rebalse por abajo del cuadrado */
+  overflow: hidden;
+  float: right;
+}
+
+#caja-gris{
+  background: gray;
+  color: black;
+  height: 200px;
+  width: 15%;
+  /* al flotar a la izquierda se va a */
+  /*  superponer sobre la caja verde  */
+  float: left;
+  margin-right: 5px;
+}
+
+#caja-verde{
+  background: green;
+  color: white;
+  height: 200px;
+  width: 25%;
+  /* al usar clear se resetea el flot que dejan */
+  /* los elementos de abajo */
+  /* clear:both; */
+  float: right;
+  margin-left: 5px;
+}
+
+#caja-amarilla{
+  background: #cccc00;
+  color: #222;
+  height: 200px;
+  width: 10%;
+  /* para que vuelva a su posicion natural clear both */
+  /* clear: both; */
+  float: left;
+  margin-left: 5px;
+  margin-right: 15px;
+  border: 20px;
+  border-radius: 20px;
+}
+
+p {
+  margin: 0;
+  color: brown;
+  padding: 5px;
+}

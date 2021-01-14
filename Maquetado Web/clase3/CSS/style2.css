@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+}
+
+header, nav, #aside-1, main, #aside-2, footer {
+  overflow: hidden;
+  float: left;
+  padding: 5px;
+}
+
+header{
+  background-color: red;
+  color: white;
+  width: 100%;
+  /* 15% del area visible vertical */
+  height: 15vh;
+}
+
+nav {
+  background-color: blue;
+  color: white;
+  width: 100%;
+  height: 15vh;
+}
+
+#aside-1 {
+  background-color: purple;
+  color: white;
+  width: 15%;
+  height: 60vh;
+}
+
+main {
+  background-color: orange;
+  color: black;
+  width: 75%;
+  height: 60vh;
+}
+
+#aside-2{
+  background-color: brown;
+  color: wheat;
+  width: 10%;
+  height: 60vh;
+}
+
+footer{
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 10vh;
+}

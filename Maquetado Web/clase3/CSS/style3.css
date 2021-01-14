@@ -1,0 +1,18 @@
+h1{
+  /* text shadow se maneja con los siguientes parametros */
+  /* desplazamiento hori, verti, difuminado, color */
+  text-shadow: 5px 5px 4px blue, -5px -5px 4px red;
+}
+
+div {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+  color: yellow;
+  margin: 30px;
+
+  /* se le agrega la propiedad del tamaño de sombra */
+  /* se aplica en la cuarta posicion de  parametros */
+  /* tambien se pueden hacer sombras de caja multi. */
+  box-shadow: 20px 20px 8px 2px darkgreen;
+}
