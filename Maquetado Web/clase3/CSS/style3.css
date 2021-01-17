@@ -15,4 +15,16 @@ div {
   /* se aplica en la cuarta posicion de  parametros */
   /* tambien se pueden hacer sombras de caja multi. */
   box-shadow: 20px 20px 8px 2px darkgreen;
+
+  /* Border Radius */
+  border-radius: 50px;                 /* TLTRBRBL */
+  border-radius: 30px 50px;            /* aplica esquinas contrarias: TLBR y TRBL */
+  border-radius: 80px 40px 20px;       /* 3 valores: TL TRBL BR */
+  border-radius: 100px 80px 40px 20px; /* 4 esquinas: TL TR BR BL */
+
+  /* Border Radius (rx != ry) */
+  border-radius: 80px/160px 50px;      /* rx(TLTRBRBL)/ry(TLBR TRBL) */
+
+  overflow: hidden;
+
 }
