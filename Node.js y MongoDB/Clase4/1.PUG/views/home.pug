@@ -1,0 +1,13 @@
+extends layout.pug
+
+block content
+  h2(style="color:blue;")!= "<i>Tus mascotas son:</i>"
+  //con los guines podemos escribir codigo javascript
+  - var pets = ['cat', 'dog', 'bird', 'sugar glider']
+  ul
+    each petName in pets
+      li(style="font-style:italic;")= petName
+
+  ol
+    each usuario in usuarios
+      li(style="text-decoration:underline;")!= usuario
