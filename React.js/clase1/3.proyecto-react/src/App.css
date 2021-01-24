@@ -1,0 +1,12 @@
+.App {
+    
+}
+
+.App .jumbotron{
+  background-color: peru;
+  color: white
+}
+
+.App hr {
+  background-color: #ddd;
+}

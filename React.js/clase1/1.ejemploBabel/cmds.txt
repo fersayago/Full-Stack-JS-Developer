@@ -1,0 +1,18 @@
+LINKS:
+https://babel.io
+
+INSTALACIÓN BABEL:
+1) npm i babel-cli babel-preset-env -D
+2) crear archivo configuracion .babelrc que contenga ->
+{
+  "presets": ["env"]
+}
+
+EJECUCIÓN:
+.\node_modules\.bin\babel index.ES6.js
+de esta manera lo que hace babel es ejecutar un console log
+qe hace lo mismo que la file pero esta escrito en ECMAScript 5
+
+
+.\node_modules\.bin\babel index.ES6.js -o index.ES5.js -w
+Con este comando crea un archivo JS en ES5
