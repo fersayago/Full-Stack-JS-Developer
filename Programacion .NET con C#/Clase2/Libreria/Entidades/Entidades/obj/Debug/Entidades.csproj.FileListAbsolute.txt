@@ -1,6 +1,0 @@
-C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase2\Libreria\Entidades\Entidades\bin\Debug\Entidades.dll
-C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase2\Libreria\Entidades\Entidades\bin\Debug\Entidades.pdb
-C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase2\Libreria\Entidades\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
-C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase2\Libreria\Entidades\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
-C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase2\Libreria\Entidades\Entidades\obj\Debug\Entidades.dll
-C:\Users\Fernando\Documents\Code\EducacionIT\Programacion .NET con C#\Clase2\Libreria\Entidades\Entidades\obj\Debug\Entidades.pdb
