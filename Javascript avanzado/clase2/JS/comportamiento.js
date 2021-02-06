@@ -1,0 +1,1 @@
+const enlace = document.querySelector("a");
