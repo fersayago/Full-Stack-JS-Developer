@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300&family=Shadows+Into+Light&display=swap');
+
+
+body {
+  color:red; /* ESTE CAMPO SE HEREDA A SUS HIJOS */
+  font-family: 'Shadows Into Light', cursive;
+}
+
+main {
+  color: blue; /* Anula el color del body y hereda a h1 y p */
+  /* MISMA JERARQUIA IMPORTA EL ORDEN */
+  border-left: 2px solid red;
+  border: 2px double green;
+}
+
+p{
+  color: brown;
+}
+
+* {
+  color: magenta; /* Selector universal le gano a elemento heredado */
+}
+
+h1,h2{
+  font-family: 'Courier New', Courier, monospace;
+  color: orangered;
+}
+
+h1{
+  color: green;
+}
+
+section p{ /* Le gana el nivel de jerarquia a "p" por ser mas especifico */
+  color: teal;
+}
+
+main section:last-child {
+  color:yellow;
+}
+
+.parrafo {
+  color: crimson;
+}
+
+.parrafo2 { /* CUANDO DOS SELECTORES DE CLASE MODIFICAN EL MISMO ATRIBUTO GANA LA ULTIMA DEFINIDA*/
+  color: limegreen;
+}
+
+/* ORDEN DE PRIORIDAD SELECTORES DE COLOR: */
+/* SELECTOR DE ETIQUETA > SELECTOR UNIVERSAL > SELECTOR HERERDADO */

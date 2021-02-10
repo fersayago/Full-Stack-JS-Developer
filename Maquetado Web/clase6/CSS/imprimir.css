@@ -1,0 +1,18 @@
+/* @media print{ */
+@media screen {
+  ul{
+    list-style: none;
+  }
+}
+
+@media (max-width: 768px){
+  body {
+    background-color: lightgoldenrodyellow;
+  }
+}
+
+@media (max-width: 595px){
+  body {
+    background-color: lightsalmon;
+  }
+}
