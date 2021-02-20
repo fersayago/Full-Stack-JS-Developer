@@ -1,0 +1,30 @@
+div {
+  border: 1px solid black;
+}
+
+main {
+  display: grid;
+  /* queremos armar 4 columnas que seteen automaticamente su ancho */
+  grid-template-columns: auto auto auto auto;
+  /* grid-template-columns: auto 100px auto 200px; <- se pueden combinar */
+  grid-auto-rows: 100px;
+}
+
+#expand-1 {
+  /* COLUMNA */
+  grid-column-start: 2; /* numero columna inicial incluida */
+  /* grid-column-end: 4; numero columna final excluida */
+  grid-column-end: span 2; /* expande 2 columnas */
+  /* FILA */
+  grid-row-start: 2; /* numero fila inicial incluida */
+  /* grid-row-end: 4; numero fila final excluida */
+  grid-row-end: span 2; /* expande 2 filas */
+}
+
+#expand-2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
