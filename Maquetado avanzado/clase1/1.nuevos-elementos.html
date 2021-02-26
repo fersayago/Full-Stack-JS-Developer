@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maquetado avanzado - nuevos elementos en HTML5</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <h2><u>Etiqueta de video</u></h2>
+
+    <div>
+      <!-- poster="" permite elegir la miniatura del video -->
+      <video id="mi-video" controls width="400" poster="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FRua2_nWrFjE%2Fmaxresdefault.jpg">
+        <!-- me permite asociar multiples videos a un elemento -->
+        <!-- si el de arriba no esta disponible por problemas de que no existe o codecs el reproductor va a elegir el segundo -->
+        <source src="IMG/video.ogv" />
+        <source src="./IMG/video2.mp4" />
+        <!-- si no puede reproducir ningun video -->
+        Etiqueta de video no soportada
+      </video>
+      
+      <div>
+        <!-- <button id="btn-play">Play</button>
+        <button id="btn-pause">Pause</button>
+        <button id="btn-start">Start</button>
+        <button id="btn-change">Change</button> -->
+
+        <img id="btn-play" src="https://cdn0.iconfinder.com/data/icons/media-yellow/60/001_-_play-64.png">
+        <img id="btn-pause" src="https://cdn0.iconfinder.com/data/icons/media-yellow/60/004_-_Pause-64.png">
+        <img id="btn-start" src="https://cdn0.iconfinder.com/data/icons/media-yellow/60/006_-_Skip_Backward-64.png">
+        <img id="btn-change" src="https://cdn0.iconfinder.com/data/icons/media-yellow/60/010_-_Eject-64.png">
+      </div>
+    </div>
+
+    <h2><u>Etiqueta de audio</u></h2>
+    
+    <audio controls muted loop>
+      <source src="IMG/audio.ogg">
+      <source src="IMG/audio.mp3">
+      Etiqueta de audio no soportada
+    </audio>
+
+    <script src="./JS/script.js"></script>
+  </body>
+</html>

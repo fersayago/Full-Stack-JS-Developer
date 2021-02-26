@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+}
+
+div {
+  border: 1px solid yellow;
+}
+
+.wrapper {
+  background-color: gray;
+  display: grid;
+  /* grid-template-columns: auto auto auto auto; */
+  /* usamos la fragmentación de objetos para ajustar a anchos de distinto tamaño */
+  grid-template-columns: 0.5fr 4fr 1fr 2fr;
+  /* usamos repeat para no escribir el mismo valor 4 veces */
+  grid-template-rows: repeat(4, 100px);
+
+  /* PARA USAR LAS AREAS QUE VAMOS A SETEAR EN LOS ITEMS */
+  grid-template-areas:
+    "a b . d"
+    "a . . d"
+    "a . c c"
+    ". . c c";
+}
+
+.item1{
+  background: blue;
+  color: white;
+  /* DEFINIMOS NOMBRE DE AREA */
+  grid-area: a;
+}
+
+.item2{
+  background: red;
+  color: white;
+  grid-area: b;
+}
+
+.item3{
+  background: green;
+  color: white;
+  grid-area: c;
+}
+
+.item4{
+  background: black;
+  color: white;
+  grid-area: d;
+}

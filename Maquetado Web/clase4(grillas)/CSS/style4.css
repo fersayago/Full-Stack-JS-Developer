@@ -1,0 +1,54 @@
+h1, h2, h3, p, body {
+  margin: 0;
+}
+
+.container{
+  background-color: gray;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 15vh 15vh 60vh 10vh;
+  grid-template-areas:
+    "header header header header header"
+    "nav    nav    nav    nav    nav   "
+    "aside  main   main   main   main  "
+    "footer footer footer footer footer"
+  ;
+}
+
+.container header {
+  background-color: red;
+  color: white;
+  text-align: center;
+  grid-area: header;
+  line-height: 15vh;
+}
+
+.container nav {
+  background-color: orangered;
+  color: white;
+  text-align: center;
+  grid-area: nav;
+  line-height: 15vh;
+}
+
+.container aside {
+  background-color: brown;
+  color: white;
+  text-align: center;
+  grid-area: aside;
+}
+
+.container main {
+  background-color: green;
+  color: white;
+  text-align: center;
+  grid-area: main;
+}
+
+.container footer {
+  background-color: red;
+  color: white;
+  text-align: center;
+  grid-area: footer;
+  line-height: 10vh;
+}
