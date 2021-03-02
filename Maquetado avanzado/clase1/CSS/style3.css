@@ -1,0 +1,9 @@
+h2 {
+  color: purple;
+}
+
+canvas {
+  width: 320px;
+  height: 180px;
+  border: 1px solid blue;
+}
