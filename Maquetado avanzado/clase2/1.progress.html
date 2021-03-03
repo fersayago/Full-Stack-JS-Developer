@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maquetado avanzado - nuevos elementos en HTML5 - barras</title>
+  </head>
+  <body>
+    <h2>Barra de Progreso (progress)</h2>
+    <div>
+      <progress id="barra" min="0" max="100" value="0"></progress>
+      <span id="porcentaje-completado">0</span>
+      <button id="btn-barra-menos">DEC</button>
+      <button id="btn-barra-mas">INC</button>
+    </div>
+
+    <br />
+
+    <h2>Barras de Medición (meter)</h2>
+    <div>
+      <meter id='meter' min='0' value="0" max='100' low='34' high='60' optimum='90'></meter>
+      <span id="porcentaje-completado-meter">0</span>
+      <button id="btn-meter-menos">DEC</button>
+      <button id="btn-meter-mas">INC</button>
+    </div>
+
+    <script>
+      /* PROGRESS */
+      var barra = document.getElementById("barra");
+      var span = document.getElementById("porcentaje-completado");
+      document.getElementById("btn-barra-menos").onclick = menosProgress;
+      /* podemos hacer lo mismo con event listener */
+      document.getElementById("btn-barra-mas").addEventListener('click', masProgress)
+
+      var valorProgress = 0;
+
+      function menosProgress() {
+        console.log("menosProgress");
+        if (valorProgress > 0) {
+          valorProgress = valorProgress - 5;
+          barra.value = valorProgress;
+          span.innerText = valorProgress;
+        }
+      }
+
+      function masProgress() {
+        console.log("masProgress");
+        if (valorProgress < 100) {
+          valorProgress = valorProgress + 5;
+          barra.value = valorProgress;
+          span.innerText = valorProgress;
+        }
+      }
+
+      /* METER */
+      var meter = document.getElementById("meter");
+      var span = document.getElementById("porcentaje-completado-meter");
+      document.getElementById("btn-meter-menos").onclick = menosMeter;
+      /* podemos hacer lo mismo con event listener */
+      document.getElementById("btn-meter-mas").addEventListener('click', masMeter)
+
+      var valorMeter = 0;
+
+      function menosMeter() {
+        console.log("menosMeter");
+        if (valorMeter > 0) {
+          valorMeter = valorMeter - 5;
+          meter.value = valorMeter;
+          span.innerText = valorMeter;
+        }
+      }
+
+      function masMeter() {
+        console.log("masMeter");
+        if (valorMeter < 100) {
+          valorMeter = valorMeter + 5;
+          meter.value = valorMeter;
+          span.innerText = valorMeter;
+        }
+      }
+    </script>
+  </body>
+</html>

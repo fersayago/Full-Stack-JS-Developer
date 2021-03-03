@@ -1,0 +1,102 @@
+body {
+  height: 1000px;
+}
+
+/* --------------------------------------------------------------------- */
+/* -----Uso de variables para simplificar la actualizacion de datos----- */
+/* --------------------------------------------------------------------- */
+
+/* puedo trabajar como si fuese  CSS puro */
+h1 {
+  color: cyan;
+}
+
+/* Puedo trabajar con variables */
+@color-texto: cyan;
+@fondo-titulos: blue;
+@fondo-parrafos: purple;
+
+h1{
+  background-color:@fondo-titulos;
+}
+
+p{
+  color: @color-texto;
+  background-color: @fondo-parrafos;
+}
+
+/* --------------------------------------------------------------------- */
+/* ---Anidamiento de una estructura selectora dentro de otro selector--- */
+/* --------------------------------------------------------------------- */
+
+/* PARA ANIDAR EN CSS PURO
+h2 {
+  color:green;
+}
+
+h2 .primero {
+  font-style: italic;
+} */
+
+/* PARA ANIDAR EN LESS */
+h2{
+  color:green;
+  .primero {
+    font-style: italic;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* ---Manejo de un evento asociado a un elemento de la vista con LESS--- */
+/* --------------------------------------------------------------------- */
+
+/* HOVER EN CSS PURO
+#segundo {
+  color: aqua;
+}
+
+#segundo:hover{
+  color: teal;
+} */
+
+/* HOVER EN LESS */
+#segundo {
+  color: aqua;
+  &:hover{
+    color:teal;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* ----Asignar distintos anchos a cada uno de los li de la lista ul----- */
+/* --------------------------------------------------------------------- */
+
+li{
+  border: 1px dashed red;
+}
+
+/* MODIFICAR ANCHOS DE LI EN CSS PURO
+.item-1{
+  width: 200px;
+}
+
+.item-2{
+  width: 300px;
+}
+
+.item-3{
+  width: 400px;
+}
+
+.item-4{
+  width: 500px;
+} */
+
+@mirango: 1,2,3,5;
+
+/* each(range(4), { */
+each(@mirango, {
+  .item-@{value} {
+    width: (@value * 100px)
+  }
+});

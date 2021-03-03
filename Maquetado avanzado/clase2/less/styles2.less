@@ -1,0 +1,170 @@
+/* VARIABLES */
+@background-color: #ffffc0;
+@text-color: blue;
+
+p {
+  background-color: @background-color;
+  color: @text-color;
+}
+
+ul {
+  background-color: @background-color;
+}
+
+li {
+  color: @text-color;
+}
+
+
+/* --------------------------------------------------------------------- */
+/* -------------------------------MIXINS-------------------------------- */
+/* --------------------------------------------------------------------- */
+
+/* PARA HACER DOS CIRCULOS EN CSS PURO 
+  #small-circle{
+  width: 50px;
+  height: 50px;
+  background-color: navy;
+  border-radius: 50%;
+}
+
+#large-circle{
+  width: 100px;
+  height: 100px;
+  background-color: navy;
+  border-radius: 50%;
+} */
+
+/* PARA HACER DOS CIRCULOS CON MIXINS EN LESS */
+#circle() {
+  background-color: navy;
+  border-radius: 50%;
+}
+
+#small-circle{
+  width: 50px;
+  height: 50px;
+  #circle(); /* EN LOS PARENTESIS DE LOS MIXINS SE PUEDEN PASAR PARAMETROS */
+}
+
+#large-circle{
+  width: 100px;
+  height: 100px;
+  #circle();
+}
+
+/* ----------- */
+
+#circle2(@size: 25px){
+  background-color: olive;
+  border-radius: 50%;
+
+  width: @size;
+  height: @size;
+}
+
+#small-circle2{
+
+  #circle2(); /* MIXIN QUE USA VALOR POR DEFECTO */
+}
+
+#large-circle2{
+  #circle2(100px); /* MIXIN QUE RECIBE PARAMETROS */
+}
+
+
+/* --------------------------------------------------------------------- */
+/* -----------------------------ANIDAMIENTO----------------------------- */
+/* --------------------------------------------------------------------- */
+
+ol {
+  background-color: purple;
+  padding: 10px;
+  list-style: none;
+
+  li {
+    background-color: #fff;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+}
+
+/* --------------------------------------------------------------------- */
+/* -------------------------------AMBITO-------------------------------- */
+/* --------------------------------------------------------------------- */
+
+@color-texto-ol: #000000;
+ol {
+  @color-texto-ol: #fff;
+  background-color: purple;
+  padding: 10px;
+  list-style: none;
+
+  li {
+    @color-texto-ol: blueviolet; /* gana esta por que es la mas cercana */
+    background-color: #fff;
+    color: @color-texto-ol;
+    border-radius: 4px;
+    margin: 10px 0;
+  }
+}
+
+
+/* --------------------------------------------------------------------- */
+/* -----------------------------OPERACIONES----------------------------- */
+/* --------------------------------------------------------------------- */
+
+@div-width: 100px;
+@color: crimson;
+
+div {
+  height: 50px;
+  display: inline-block;
+}
+
+#left {
+  width: @div-width;
+  background-color: @color - 100; /* le resto valor para cambiarle la gama */
+}
+
+#right {
+  width: @div-width * 2;
+  background-color: @color;
+}
+
+/* --------------------------------------------------------------------- */
+/* ------------------------------FUNCIONES------------------------------ */
+/* --------------------------------------------------------------------- */
+
+
+/* FADEOUT */
+@var: #004590;
+
+div#fade {
+  height: 50px;
+  width: 50px;
+  background-color: @var;
+
+  &:hover{
+    background-color: fadeout(@var, 50%);
+  }
+}
+
+/* SATURATE Y DESATURATE */
+@red: #842210;
+@blanco: #fff;
+
+#saturate {
+  background-color: saturate(@red, 30%);
+  color: @blanco;
+}
+
+#sinsaturate {
+  background-color: @red;
+  color: @blanco;
+}
+
+#desaturate {
+  background-color: desaturate(@red, 30%);
+  color: @blanco;
+}
