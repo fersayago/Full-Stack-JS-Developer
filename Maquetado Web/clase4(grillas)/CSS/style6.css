@@ -1,0 +1,57 @@
+h1{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* ----------------------- */
+/*        NTH CHILD        */
+/* ----------------------- */
+
+/* main :first-child{
+  background-color: pink;
+
+}  REEMPLAZAMOS POR NTH CHILD*/
+
+main :nth-child(1){ /* first child */
+  background-color: pink;
+}
+
+main :nth-child(8) { /* last child estatico */
+  background-color: lightcoral;
+}
+
+main :nth-last-child(6) { /* empieza a contar desde abajo */
+  background-color: yellow;
+}
+
+main :nth-child(even) { /* a todos los hijos pares */
+  background-color: lightseagreen;
+}
+
+/* ----------------------- */
+/*      NTH OF TYPE        */
+/* ----------------------- */
+
+main p:first-of-type{
+  border: 5px solid black;
+}
+
+main p:nth-of-type(2){
+  border: 5px solid darkred;
+}
+
+main h1:last-of-type {
+  border: 5px solid darkorange;
+}
+
+/* !OJO no funciona si utlizamos el live server - este servidor genera un script que queda como ultimo elemento del body */
+/* body :last-child { */
+/* body p:last-child { */
+
+  /* SI funciona */
+  body p:last-of-type{
+    background-color: orange;
+  }

@@ -22,6 +22,11 @@ header {
   align-items: center;
 }
 
+img {
+  width: 64px;
+  align-items: center;
+}
+
 header #encabezado{
   width: 35%;
 }
@@ -54,7 +59,7 @@ main {
 
 #contacto {
   width: 100%;
-  background-color: green;
+  /* background-color: green; */
 }
 
 section {
@@ -86,6 +91,7 @@ nav div{
 
 /* PSEUDOCLASE LINK (si el sitio no fue visitado) */
 /* PSEUDOCLASE VISITED (si el sitio fue visitado) */
+/* TIENE QUE ESTAR ANTES DE HOVER */
 nav a:link, nav a:visited{
   background-color: #fff;
   color: #000;
@@ -93,8 +99,13 @@ nav a:link, nav a:visited{
 
 /* !RETOMAR 1:46:30 */
 
+section img:hover {
+  opacity: 0.5;
+}
+
 
 /* PSEUDOCLASE HOVER */
+/* TIENE QUE ESTAR ANTES DE ACTIVE */
 nav a:hover{
   background-color: #fff;
   color: #000;
@@ -120,7 +131,12 @@ nav a {
   border-radius: 10px;
 }
 
-#primera-seccion{
+
+/* #primera-seccion{ */
+main section:first-child{ /* detecta los primeros elementos de todos los hijos de algo */
+  background-color: red;
+
+
   height: 175px;
 
   /* PROPIEDAD OVERFLOW */
@@ -142,6 +158,10 @@ nav a {
 
 }
 
+main section:last-child {
+  background-color: darkblue;
+}
+
 h1{
   margin-left: 20px;
 }
@@ -160,3 +180,28 @@ h1{
   width: 61px;
   overflow: hidden;
 }
+
+label, input, button {
+  display: block;
+  margin: 5px;
+}
+
+textarea {
+  display: block;
+  resize: horizontal; /* aclaramos el resize */
+}
+
+form, button {
+  margin-top: 20px;
+}
+
+input {
+  width: 100px;
+}
+
+input:focus { /* al hacer click en el campo o el label asignado */
+  width: 235px;
+}
+
+/* SELECTORES AVANZADOS USANDO PSEUDOCLASES */
+
