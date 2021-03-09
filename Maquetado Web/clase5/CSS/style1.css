@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+table, tr, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+p {
+  margin: 0;
+}
+
+th, td {
+  height: 40px;
+  padding: 5px;
+}
+
+table tr:first-child {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+table tr:first-child:hover {
+  background-color: blue;
+}
