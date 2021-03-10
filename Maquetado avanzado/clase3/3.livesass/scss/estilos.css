@@ -1,0 +1,399 @@
+/* --------- */
+/* VARIABLES */
+/* --------- */
+body {
+  color: #656;
+  font-family: arial, verdana, sans-serif;
+}
+
+h1 {
+  color: #eee;
+  background-color: #55a;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.4em;
+  padding: 10px;
+  text-transform: uppercase;
+  border-radius: 12px;
+}
+
+div.destacado {
+  border: 3px dotted #6b6;
+  padding: 10px 20px;
+}
+
+/* ----------------------------- */
+/*    ANIDACION DE SELECTORES    */
+/* ----------------------------- */
+.cajadestacada {
+  background-color: crimson;
+}
+
+.cajadestacada header {
+  background-color: #000;
+  color: #fff;
+}
+
+.cajadestacada header a {
+  color: #ff6;
+}
+
+/* referencia al elemento padre */
+header a.dinamico {
+  color: red;
+}
+
+header a.dinamico:hover {
+  background-color: #ff6;
+}
+
+p {
+  margin: 0;
+  color: #eee;
+  font-family: verdana;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.3em;
+}
+
+/* ----------------------------- */
+/*             IMPORT            */
+/* ----------------------------- */
+/* no es necesaria la extension */
+body {
+  font-size: 16pt;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 20pt;
+  font-family: serif, "Times New Roman";
+}
+
+/* ----------------------------- */
+/*             MIXINS            */
+/* ----------------------------- */
+/* SIN PARAMETROS */
+/* CON PARAMETROS */
+/* CON PARAMETROS POR DEFAULT */
+h1 {
+  font-size: 1.3em;
+  padding: 15px;
+  /* @include color-invertido */
+  background-color: cyan;
+  color: brown;
+}
+
+div {
+  padding: 5px;
+  /* @include color-invertido-p(yellow, black); */
+  background-color: pink;
+  color: blue;
+}
+
+/* ----------------------------- */
+/*            HERENCIA           */
+/* ----------------------------- */
+h1 {
+  background-color: blanchealmond;
+  color: brown;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  /* parecido al include pero sin parametros */
+  margin: 0;
+  font-size: 2em;
+}
+
+/* ----------------------------- */
+/*           FUNCIONES           */
+/* ----------------------------- */
+.uno {
+  width: 150px;
+  background-color: orange;
+  text-align: center;
+}
+
+/* ----------------------------------------------- */
+/*   LOOPS (FOR - EACH - WHILE) y CONDICIONALES    */
+/* ----------------------------------------------- */
+ul li:nth-child(1) {
+  color: #222;
+  background-color: #f90606;
+}
+
+ul li:nth-child(1):after {
+  content: " - contenido -> 1";
+}
+
+ul li:nth-child(2) {
+  color: #222;
+  background-color: #f20d0d;
+}
+
+ul li:nth-child(2):after {
+  content: " - contenido -> 2";
+}
+
+ul li:nth-child(3) {
+  color: #222;
+  background-color: #ec1313;
+}
+
+ul li:nth-child(3):after {
+  content: " - contenido -> 3";
+}
+
+ul li:nth-child(4) {
+  color: #222;
+  background-color: #e61a1a;
+}
+
+ul li:nth-child(4):after {
+  content: " - contenido -> 4";
+}
+
+ul li:nth-child(5) {
+  color: #222;
+  background-color: #df2020;
+}
+
+ul li:nth-child(5):after {
+  content: " - contenido -> 5";
+}
+
+ul li:nth-child(6) {
+  color: #222;
+  background-color: #d92626;
+}
+
+ul li:nth-child(6):after {
+  content: " - contenido -> 6";
+}
+
+ul li:nth-child(7) {
+  color: #222;
+  background-color: #d22d2d;
+}
+
+ul li:nth-child(7):after {
+  content: " - contenido -> 7";
+}
+
+ul li:nth-child(8) {
+  color: #222;
+  background-color: #cc3333;
+}
+
+ul li:nth-child(8):after {
+  content: " - contenido -> 8";
+}
+
+ul li:nth-child(9) {
+  color: #222;
+  background-color: #c63939;
+}
+
+ul li:nth-child(9):after {
+  content: " - contenido -> 9";
+}
+
+ul li:nth-child(10) {
+  color: #222;
+  background-color: #bf4040;
+}
+
+ul li:nth-child(10):after {
+  content: " - contenido -> 10";
+}
+
+ul li:nth-child(11) {
+  color: #222;
+  background-color: #b94646;
+}
+
+ul li:nth-child(11):after {
+  content: " - contenido -> 11";
+}
+
+ul li:nth-child(12) {
+  color: #222;
+  background-color: #b34d4d;
+}
+
+ul li:nth-child(12):after {
+  content: " - contenido -> 12";
+}
+
+ul li:nth-child(13) {
+  color: #222;
+  background-color: #ac5353;
+}
+
+ul li:nth-child(13):after {
+  content: " - contenido -> 13";
+}
+
+ul li:nth-child(14) {
+  color: #222;
+  background-color: #a65959;
+}
+
+ul li:nth-child(14):after {
+  content: " - contenido -> 14";
+}
+
+ul li:nth-child(15) {
+  color: #222;
+  background-color: #9f6060;
+}
+
+ul li:nth-child(15):after {
+  content: " - contenido -> 15";
+}
+
+ul li:nth-child(16) {
+  color: #222;
+  background-color: #996666;
+}
+
+ul li:nth-child(16):after {
+  content: " - contenido -> 16";
+}
+
+ul li:nth-child(17) {
+  color: #222;
+  background-color: #936c6c;
+}
+
+ul li:nth-child(17):after {
+  content: " - contenido -> 17";
+}
+
+ul li:nth-child(18) {
+  color: #222;
+  background-color: #8c7373;
+}
+
+ul li:nth-child(18):after {
+  content: " - contenido -> 18";
+}
+
+ul li:nth-child(19) {
+  color: #222;
+  background-color: #867979;
+}
+
+ul li:nth-child(19):after {
+  content: " - contenido -> 19";
+}
+
+ul li:nth-child(20) {
+  color: #222;
+  background-color: gray;
+}
+
+ul li:nth-child(20):after {
+  content: " - contenido -> 20";
+}
+
+.list-1 {
+  border: 1px solid red;
+  width: 80px;
+}
+
+.list-1::before {
+  content: "1";
+}
+
+.list-3 {
+  border: 1px solid red;
+  width: 240px;
+}
+
+.list-3::before {
+  content: "1";
+}
+
+.list-5 {
+  border: 1px solid red;
+  width: 400px;
+}
+
+.list-5::before {
+  content: "1";
+}
+
+.list-9 {
+  border: 1px solid red;
+  width: 720px;
+}
+
+.list-9::before {
+  content: "1";
+}
+
+.module-4 {
+  background-color: black;
+  color: white;
+  width: 60%;
+}
+
+.module-4::before {
+  content: "contenido: 1";
+}
+
+.module-3 {
+  background-color: black;
+  color: white;
+  width: 45%;
+}
+
+.module-3::before {
+  content: "contenido: 2";
+}
+
+.module-2 {
+  background-color: black;
+  color: white;
+  width: 30%;
+}
+
+.module-2::before {
+  content: "contenido: 3";
+}
+
+.module-1 {
+  background-color: black;
+  color: white;
+  width: 15%;
+}
+
+.module-1::before {
+  content: "contenido: 4";
+}
+
+.fondo-1 {
+  display: inline-block;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+.fondo-2 {
+  display: inline-block;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}
+
+.fondo-3 {
+  display: inline-block;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+}
+/*# sourceMappingURL=estilos.css.map */
