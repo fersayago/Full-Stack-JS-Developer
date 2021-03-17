@@ -1,0 +1,54 @@
+div {
+  width: 200px;
+  height: 200px;
+  background: lightblue;
+  border-radius: 10px;
+  margin: 6px;
+  text-align: center;
+  line-height: 200px;
+  font-size: 20px;
+
+  /* ------------------------------------- */
+  /*             TRANSICIONES              */
+  /* ------------------------------------- */
+
+  /* transition-property: background;
+  transition-duration: 1s;
+  transition-delay: 750ms;
+  transition-timing-function: linear;
+  */
+
+
+  /* ------------------------------------- */
+  /*        TRANSICIONES MULTIPLES         */
+  /* ------------------------------------- */
+
+  /* transition-property: width, height, background, border-radius;
+  transition-duration: 5s, 5s, 2s, 2s;
+  transition-delay: 500ms, 500ms, 1500ms, 1500ms;
+  transition-timing-function: ease-in-out, ease-in-out, linear, linear; */
+
+  /* ------------------------------------- */
+  /*     TRANSICION MULTIPLE: SORTHAND     */
+  /* ------------------------------------- */
+
+  /* transition:
+    width 4s 500ms ease-in-out,
+    height 4s 1000ms ease-in-out,
+    background 2s 2s linear,
+    border-radius 2s 2s linear,
+    transform 3s 8s ease; */
+
+    /* para poder transformar todas las propiedades al mismo tiempo */
+    transition: all 4s 1s ease-in-out;
+}
+
+div:hover {
+  background: lightgreen;
+  width: 700px;
+  height: 350px;
+  border-radius: 50px;
+  transform: rotate(-7deg) translateX(150px);
+  line-height: 350px;
+  font-size: 50px;
+}

@@ -1,0 +1,63 @@
+div {
+  width: 200px;
+  height: 200px;
+}
+
+#cubo {
+  position: relative;
+  margin: 100px auto;
+  transform: perspective(700px) rotateX(-35deg) rotateY(-35deg);
+  transform-style: preserve-3d;
+}
+
+.cara {
+  font-size: 35px;
+  position:absolute;
+  text-align: center;
+  line-height: 200px;
+  opacity: 0.8;
+}
+
+#superior {
+  background: lightblue;
+  transform: 
+    rotateX(90deg)
+    translateZ(100px)
+    translateY(-100px);
+}
+
+#frente {
+  background: yellow;
+}
+
+#posterior {
+  background: orange;
+  transform:
+    rotateY(180deg)
+    translateZ(200px);
+}
+
+#derecha {
+  background: lightgreen;
+  transform:
+    rotateY(90deg)
+    translateZ(100px)
+    translateX(100px);
+}
+
+#inferior {
+  background: purple;
+  transform:
+    rotateX(270deg)
+    translateZ(100px)
+    translateY(100px);
+}
+
+#izquierda {
+  background: pink;
+  transform:
+    rotateY(270deg)
+    translateZ(100px)
+    translateX(-100px);
+}
+

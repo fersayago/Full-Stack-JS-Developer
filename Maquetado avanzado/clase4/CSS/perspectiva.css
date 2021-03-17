@@ -1,0 +1,25 @@
+body {
+  margin-top: 200px;
+}
+
+#padre {
+  width: 400px;
+  height: 400px;
+  border: 1px dashed black;
+  padding: 10px;
+  position: relative;
+  /* PARA CAMBIAR EL PUNTO DE VISTA Y  DESDE DONDE SE VE */
+  perspective: 40px;
+  perspective-origin: top right;
+}
+
+#hijo {
+  width: 100px;
+  height: 100px;
+  background: orange;
+  color: brown;
+  position: absolute;
+  left: 200px;
+  top: 100px;
+  transform: rotateY(25deg);
+}
