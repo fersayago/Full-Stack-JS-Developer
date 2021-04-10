@@ -1,0 +1,59 @@
+h1 {
+  color: blue;
+}
+
+/* @keyframes miMovimiento {
+  from {
+     width: 100px;
+     height: 200px;
+     background-color: lightblue;
+  }
+  to {
+    width: 800px;
+    height: 400px;
+    background-color: limegreen;
+  }
+} */
+
+@keyframes miMovimiento {
+  0% {
+     width: 200px;
+     height: 200px;
+     background-color: lightblue;
+  }
+  50% {
+    width: 150px;
+    height: 150px;
+    background-color: lightsalmon;
+  }
+  75% {
+    width: 400px;
+    height: 250px;
+    background-color: lightgreen;
+  }
+  100% {
+    width: 800px;
+    height: 400px;
+    background-color: limegreen;
+  }
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  background-color: pink;
+  border-radius: 10px;
+  margin: 50px;
+
+  /* definimos la animación */
+  animation-name: miMovimiento;
+  animation-duration: 2s;
+  animation-delay: 1000ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /* 3; */ 
+  animation-direction: alternate;
+
+  /* hace que el elemento termine en la ultima etapa de la animación y no en su estado inicial */
+  animation-fill-mode: forwards;
+
+}
