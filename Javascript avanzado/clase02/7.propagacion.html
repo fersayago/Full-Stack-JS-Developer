@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propagacion de eventos</title>
+  <style>
+
+    html, body{
+      width: 500px;
+      height: 300px;
+    }
+
+    .box{
+      margin: 10px;
+      border: 1px solid black;
+      width: 50%;
+      height: 50%;
+    }
+
+    #caja1{
+      background-color: red;
+    }
+
+    #caja2{
+      background-color: green;
+    }
+
+    #caja3{
+      background-color: blueviolet;
+      width: 20%;
+      height: 20%;
+    }
+
+    #caja4{
+      background-color: orange;
+      width: 20%;
+      height: 20%;
+    }
+  </style>
+</head>
+<body>
+  <div id="caja1" class="box">
+    <div id="caja2" class="box">
+      <div id="caja3" class="box"></div>
+      <div id="caja4" class="box"></div>
+    </div>
+  </div>
+
+  <script src="./JS/propagacion.js"></script>
+</body>
+</html>

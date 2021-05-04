@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 5 - Validaciones con JS customValidity</title>
+</head>
+<body>
+
+  <form action="alguno.php" name="registro">
+    <label >
+      Nombre
+      <input type="text" name="nombre" required>
+    </label>
+    <label >
+      Edad
+      <input type="text" name="edad" required pattern="\d{1,2}">
+    </label>
+    <button>Guardar</button>
+  </form>
+
+  <script>
+    const input1 = document.forms.registro.elements.nombre;
+    const input2 = document.forms.registro.elements.edad;
+
+    //para nombre
+    input1.addEventListener('invalid', e => {
+      if (e.target.validity.valueMissing) { // tiene value ?
+        e.target.setCustomValidity('El nombre no puede quedar vacío');
+      }
+    });
+    input1.addEventListener('change', e =>{
+      e.target.setCustomValidity(''); // significa que no hay errores
+    });
+
+    // para edad
+    input2.addEventListener('invalid', e => {
+      if (e.target.validity.patternMismatch) { // cumple el pattern ?
+        e.target.setCustomValidity('La edad debe ser un numero entre 0 y 99');
+      }
+    });
+    input2.addEventListener('change', e => {
+      e.target.setCustomValidity('');
+    })
+
+
+  </script>
+
+</body>
+</html>

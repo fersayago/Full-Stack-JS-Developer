@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario registro</title>
+</head>
+<body>
+
+  <form name="formulario" action="procesar.php" method="GET">
+    <label>
+      Email
+      <input type="text" name="email">
+    </label>
+    <label>
+      Clave
+      <input type="text" name="clave">
+    </label>
+    <button>Guardar</button>
+  </form>
+  
+  <script src="./JS/validaciones.js"></script>
+</body>
+</html>
+
+<!-- 
+El button tieien la mision de avisar al <form> que el usuario tiene la intencion de que wse envie la info al servidor.
+Es el formulario el unico que tiene el poder de enviar la informacion al servidor
+¿Como envia esa información?
+Realiza un request HTTP para poder armar esa peticion, primero arma el queryString
+
+1) busca todos los controles con el atributo name
+2) por cada control arma lo siguiente: name=value Ej: clave=123
+3) lee su atributo method
+  a- si es GET: lee su action y le agrega un signo de pregunta y luego el queryString (todo lo obtenido en punto 2 unido por &)
+  --------------------------
+  GET procesar.php?email=a%40a.com&clave=123 HTTP/1.1
+  headers...
+
+  --------------------------
+  
+  b- si es POST:
+  --------------------------
+  POST procesar.php HTTP/1.1
+  headers...
+
+  email=juan&clave=123
+  --------------------------
+-->

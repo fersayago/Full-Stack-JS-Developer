@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clase 5 - Validaciones con JS checkValidity</title>
+  <style>
+    input:valid{
+      border:3px solid green;
+    }
+
+    input:invalida {
+      border: 3px solid red;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- en caso de que no exista un <form> -->
+  <input type="text" id="campo1" required pattern="\d{3,6}" title="debes ingresar entre 3 y 6 digitos">
+  <input type="text" id="campo2" required pattern="\w{4,8}" title="debes ingresar entre 4 y 8 letras o numeros">
+  <button id="validador">Guardar</button>
+
+  <script>
+    let btn = document.getElementById("validador")
+    btn.addEventListener("click", validar);
+
+    function validar(e) {
+      let input1 = document.getElementById("campo1");
+      let input2 = document.getElementById("campo2");
+
+      /* ! CheckValidity */
+      if (input1.checkValidity() && input2. checkValidity()){
+        console.log("todo esta ok, puedes mandar estos datos con ajax:", input1.value, input2.value)
+      } else {
+        console.log("Campos con error");
+      }
+    }
+  </script>
+
+</body>
+</html>
