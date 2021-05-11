@@ -1,5 +1,5 @@
 LINKS:
-https://babeljs.io/
+https://webpack.js.org/
 
 INSTALACIÓN:
 1) npm i babel-cli babel-preset-env -D
