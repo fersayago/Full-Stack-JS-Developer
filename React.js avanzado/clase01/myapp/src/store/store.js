@@ -1,8 +1,8 @@
 import {createStore} from "redux";
 import elReducer from "../reducer/reducer"
 
-const defaultData = {
-  "articles": [
+const defaultData = { articles : [] }
+  /* "articles": [
     {
     "source": {
     "id": null,
@@ -42,8 +42,7 @@ const defaultData = {
     "publishedAt": "2021-05-14T11:25:00Z",
     "content": "Stocks are looking up at the end of a volatile week for both equities and cryptocurrencies. Keeping the newsflow going on the latter was another tweet from Tesla boss Elon Musk that has sent a popula… [+5143 chars]"
     }
-  ]
-}
+  ] */
 
 const theOnlySourceOfTruth = createStore(elReducer, defaultData);
 

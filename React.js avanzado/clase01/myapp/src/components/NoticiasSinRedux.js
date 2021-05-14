@@ -8,7 +8,7 @@ class NoticiasSinRedux extends Component {
     this.state = { articles:[] }
   }
 
-  conponentDidMount(){
+  componentDidMount(){
     const url = "https://newsapi.org/v2/everything?q=tesla&from=2021-04-14&sortBy=publishedAt&apiKey=005ee7fbcab5446abefc923dcf066efe"
     
     /* FETCH */
@@ -20,27 +20,30 @@ class NoticiasSinRedux extends Component {
       
     /* AXIOS */
     axios.get(url).then((resp) => {
-    this.setState({articles : resp.data.articles})
+    this.setState({articles : resp.data.articles});
     })
   }
 
   
 
   render() {
-    return (<div classname="row">
-      {
-        this.state.articles.map((article,index) => {
-          return (<div key={index} classname="card col-md-4 m-1">
-            <img src={article.urlToImage} alt="no se ve" />
-            <div className="card-body">
-              <h5 className="card-title">{article.title}</h5>
-              <p className="card-text">{article.content}</p>
-            </div>
-          </div>)
-        })
-      }
-
-    </div>)
+    return(
+      <div className="row">
+        {
+          this.state.articles.map((article,index) => {
+            return (
+              <div key={index} className="card col-md-3 m-1">
+                <img src={article.urlToImage} alt="no se ve"/>
+                <div className="card-body">
+                  <h5 className="card-title">{article.title}</h5>
+                  <p className="card-text">{article.content}</p>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    )
   }
 }
 
