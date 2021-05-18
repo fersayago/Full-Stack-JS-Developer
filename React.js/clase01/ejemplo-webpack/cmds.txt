@@ -2,15 +2,10 @@ LINKS:
 https://webpack.js.org/
 
 INSTALACIÓN:
-1) npm i babel-cli babel-preset-env -D
-2) crear archivo de configuración .babelrc con ->
-{
-  "presets": ["env"]
-}
+1) npm i webpack@4.44.1 webpack-cli@3.3.12 -D
 
 EJECUCION:
-para convertir archivo a un formato JS5
-.\node_modules\.bin\babel index.ES6.js -o index.JS5.js -w
-
-
-instalamos NODEMON para hacer un live view de los cambios que se apliquen
+.\node_modules\.bin\webpack index.WP.js index.JS5.js -o index.min.js --mode="production" -w
+crea una version minificada y ofuscada para usar en producción
+.\node_modules\.bin\webpack index.WP.js index.JS5.js -o index.max.js --mode="development" -w
+crea una version para desarrollo (codigos en string que son evaluados)
