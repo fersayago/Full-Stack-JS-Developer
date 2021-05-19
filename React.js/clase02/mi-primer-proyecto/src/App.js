@@ -1,4 +1,6 @@
 import './App.css';
+//import Mensaje from './components/Mensaje';
+import { Mensaje } from './components/Mensaje';
 
 function App() {
   return (
@@ -7,7 +9,7 @@ function App() {
         <div className="jumbotron">
           <h1>Mi proyecto React</h1>
           <hr />
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab facere, sed magni a dolorum excepturi vitae dolore id! Tempora molestias perferendis accusamus facere assumenda nemo necessitatibus neque fuga aut iure.</p>
+          <Mensaje />
         </div>
       </div>
     </div>
