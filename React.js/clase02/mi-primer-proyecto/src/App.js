@@ -22,7 +22,9 @@ function App() {
             </div>
           </div>
           <hr />
-          <Contador />
+          <Contador valor="123" colorFondo="brown"/>
+          <br />
+          <Contador valor="321" colorFondo="black"/>
         </div>
       </div>
     </div>
