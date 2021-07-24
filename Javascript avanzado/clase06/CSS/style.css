@@ -1,0 +1,10 @@
+nav {
+  background-color: rgb(84, 205, 249);
+  padding: 10px;
+}
+
+#contenido {
+  border: 3px dotted gray;
+  min-height: 100px;
+  width: 100%;
+}
