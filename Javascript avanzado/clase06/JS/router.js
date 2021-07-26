@@ -19,6 +19,10 @@ const routes = {
     titulo: "Estamos para usted",
     estado: {} 
   },
+  "/upload": {
+    url: "views/upload/index.html",
+    titulo: "A subir archivos"
+  },
   error404: {
     url: "404.html",
     titulo: "Error 404",
