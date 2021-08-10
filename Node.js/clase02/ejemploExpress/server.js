@@ -5,18 +5,24 @@ const app = express()
 
 let contadorVisitas = 0;
 
+// seteamos servicio de archivos para la ruta home
+
+// use = metodo para configurar capas
+app.use(express.static('public'))
+
 /* -------------------------------------- */
 /* ------------ RUTAS GET --------------- */
 /* -------------------------------------- */
 
 
-app.get('/', (req, res) => {
+app.get('/visitas', (req, res) => {
   res.send(`<h1>Hola Express!</h1> - Visitas <b>${++contadorVisitas}</b>`)
 })
 
-app.get('/page', (req, res) =>{
-  let pathIndex = '/public/index.html';
-  res.sendFile(__dirname + pathIndex);
+app.get('/', (req, res) =>{
+  //res.sendFile(__dirname + '/public/index.html');
+  res.send('Soy la ruta GET root')
+  // NO ENTRA SALVO QUE ELIMINE EL app.use()
 })
 
 app.get('*', (req, res) => {
@@ -33,6 +39,10 @@ app.get('*', (req, res) => {
 
 app.post('/', (req, res) =>{
   res.send('<h2>Ok POST</h2>')
+})
+
+app.post('/datos', (req, res) =>{
+  res.send('<h2>Ok POST datos</h2>')
 })
 
 /* ------------------------------------- */
