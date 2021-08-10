@@ -1,4 +1,3 @@
-const { fstat } = require("fs");
 const http = require("http");
 const fs = require('fs');
 
@@ -43,10 +42,19 @@ const server = http.createServer((req, res) => {
       } */
 
       /* ------------------------------------------ */
-      /*    Lectura Sincrónica (BLOQUEANTE) NO!!    */
+      /*            Lectura Asincrónica             */
       /* ------------------------------------------ */
 
-      // ! RETOMAR 1:32:00
+      fs.readFile(pathindex, (error, page) => {
+        if (error){
+          res.writeHead(404, {'content-type': 'text/html'});
+          res.end(`<h2 style="color:red;">ERROR 404. Recurso <span style="color:black;">${pathindex}</span> no encontrado</h2>`)
+        }
+        else {
+          res.writeHead(200, {'content-type': 'text/html'});
+          res.end(page);
+        }
+      })
     }
     else if (url ==="/reset"){
       contadorVisitas = 0;
