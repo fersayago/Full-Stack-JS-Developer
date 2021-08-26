@@ -15,28 +15,32 @@ class Contador extends React.Component{
     console.log(`Contador ${props.id} constructor`);
 
     // bindeo el incrementar al this de este propio objeto
-    this.incrementar = this.incrementar.bind(this)
-    this.decrementar = this.decrementar.bind(this)
-  }
+    //this.incrementar = this.incrementar.bind(this)
+    //this.decrementar = this.decrementar.bind(this)
 
-  // removemos el contador del props recibido en el render y lo puenteamos por el estado interno
-  state = {
-    contador : this.props.valor
+    this.state = {
+      contador : Number(props.valor)
+    }
   }
 
   // ! EL RENDER SE DISPARA CUANDO CAMBIA EL ESTADO INTERNO DEL COMPONENTE O CUANDO CAMBIO UNA PROP EN UN COMPONENTE BASADO EN CLASE
   
   incrementar(){
     console.log(`Contador ${this.props.id} incrementar`);
+    this.setState(prevstate => ({contador : prevstate.contador + 1}), () => {
+      console.log(this.state.contador)
+    });
   }
 
   decrementar(){
     console.log(`Contador ${this.props.id} decrementar`);
+    this.setState(prevstate => ({contador : prevstate.contador - 1}), () => {
+      console.log(this.state.contador)
+    });
   }
 
 
   render(){
-    console.log('Contador render')
     /* let contador = 123; */
     // meto las propiedades con destructuring objects y asigno valor al let contador
     let { id, colorFondo } = this.props;
@@ -50,13 +54,13 @@ class Contador extends React.Component{
         <div className="jumbotron" style={{backgroundColor: colorFondo}}>
           <h3>Contador {id}</h3>
           <div className="alert alert-info w-100">Valor: {contador}</div>
-          <button className="btn btn-success my-1" onClick={this.decrementar}>
+          <button className="btn btn-success my-1" onClick={() => this.decrementar()}>
             -
           </button>
-          <button className="btn btn-success my-1" onClick={this.incrementar}>
+          <button className="btn btn-success my-1" onClick={() => this.incrementar()}>
             +
           </button>
-          <p>retomar 2:00:00</p>
+          
         </div>
       </div>
     )
