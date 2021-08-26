@@ -29,7 +29,7 @@ class Contador extends React.Component{
     console.log(`Contador ${this.props.id} incrementar`);
     this.setState(prevstate => ({contador : prevstate.contador + 1}), () => {
       console.log(this.state.contador)
-    });
+    }); 
   }
 
   decrementar(){
