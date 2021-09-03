@@ -14,19 +14,30 @@ class Contador extends React.Component{
   }
   
   incrementar(){
-    console.log(`Contador ${this.props.id} incrementar`);
+    // DESTRUCTURADO
+    let { contador } = this.state
+    let { id } = this.props 
+    console.log(`Contador ${id} incrementar: ${contador}`);
     this.setState(prevstate => ({contador : prevstate.contador + 1}), () => {
-      console.log(this.state.contador)
-      //envio contador al padre
-      this.props.enviarContadorAlPadre(this.state.contador)
+      //console.log(this.state.contador)
+      //envio objeto con contador y Id al padre
+      this.props.enviarContadorAlPadre({
+        contador: contador,
+        id: id
+        })
     }); 
   }
 
   decrementar(){
-    console.log(`Contador ${this.props.id} decrementar`);
+    // NO DESTRUCTURADO
+
+    console.log(`Contador ${this.props.id} decrementar: ${this.state.contador} >`);
     this.setState(prevstate => ({contador : prevstate.contador - 1}), () => {
-      console.log(this.state.contador)
-      this.props.enviarContadorAlPadre(this.state.contador)
+      //console.log(this.state.contador)
+      this.props.enviarContadorAlPadre({
+        contador: this.state.contador,
+        id: this.props.id
+        })
     });
   }
 
@@ -42,10 +53,10 @@ class Contador extends React.Component{
           <h3>Contador {id}</h3>
           <div className="alert alert-info w-100">Valor: {contador}</div>
           <button className="btn btn-success my-1" onClick={() => this.decrementar()}>
-            -
+            Dismimuir
           </button>
           <button className="btn btn-success my-1" onClick={() => this.incrementar()}>
-            +
+            Incrementar
           </button>
           
         </div>
