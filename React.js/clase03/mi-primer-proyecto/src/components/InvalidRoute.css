@@ -1,0 +1,8 @@
+.InvalidRoute .jumbotron {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f85032+0,f16f5c+23,f02f17+52,f6290c+67,f6290c+75,f02f17+88,e73827+100 */
+  background: #f85032; /* Old browsers */
+  background: -moz-linear-gradient(-45deg,  #f85032 0%, #f16f5c 23%, #f02f17 52%, #f6290c 67%, #f6290c 75%, #f02f17 88%, #e73827 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg,  #f85032 0%,#f16f5c 23%,#f02f17 52%,#f6290c 67%,#f6290c 75%,#f02f17 88%,#e73827 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg,  #f85032 0%,#f16f5c 23%,#f02f17 52%,#f6290c 67%,#f6290c 75%,#f02f17 88%,#e73827 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

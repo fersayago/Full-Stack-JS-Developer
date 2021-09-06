@@ -3,6 +3,9 @@ import "./App.css";
 import { Mensaje } from "./components/Mensaje";
 import Contador from "./components/Contador";
 import Navbar from "./components/Navbar"
+import { BrowserRouter } from "react-router-dom";
+import { Switch, Route } from "react-router";
+import InvalidRoute from "./components/InvalidRoute";
 
 //function App() {
 class App extends React.Component {
@@ -43,11 +46,28 @@ class App extends React.Component {
 
             <h2>Router</h2>
 
-            <Navbar />
+            <BrowserRouter>
+              <Navbar />
+              <Switch>
+              <Route path='/mensaje1' component={
+                  () => <Mensaje titulo="Mensaje Nro 1 " colorFondo="green" />
+                } />
+              <Route path='/mensaje2' component={
+                () => <Mensaje titulo="Mensaje Nro 2 " colorFondo="orangered" />
+              } />
+              <Route path='/mensaje3' component={
+                () => <Mensaje titulo="Mensaje Nro 3 " colorFondo="blue" />
+              } />
 
-            {/* 1:55 */}
+              {/* COMPONENTE PARA RUTA NO DEFINIDA */}
+              <Route component={InvalidRoute} />
+              </Switch>
+            </BrowserRouter>
+            
+            {/* ! RETOMAR 2:12 */}
 
-            <div className="row">
+
+{/*             <div className="row">
               <div className="col-4">
                 <Mensaje titulo="Componente" colorFondo="darkgreen" />
               </div>
@@ -58,7 +78,7 @@ class App extends React.Component {
                 <Mensaje titulo="Mensaje nro 3" colorFondo="darkred" />
               </div>
             </div>
-            <hr />
+            <hr /> */}
 
             <h2>Uplifting</h2>
             <br />
