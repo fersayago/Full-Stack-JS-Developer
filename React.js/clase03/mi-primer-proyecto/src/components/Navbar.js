@@ -23,17 +23,41 @@ const Navbar = () => (
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <NavLink className="nav-link" activeStyle={{ fontWeight: 'bold' }} to="/mensaje1">
+          <NavLink
+            className="nav-link"
+            activeStyle={{ fontWeight: "bold" }}
+            to="/mensaje"
+          >
+            Mensaje
+          </NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink
+            className="nav-link"
+            activeStyle={{ fontWeight: "bold" }}
+            //to="/mensaje1"
+            to="/mensaje1/Mensaje Nro 1/green"
+          >
             Mensaje 1
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" activeStyle={{ fontWeight: 'bold' }} to="/mensaje2">
+          <NavLink
+            className="nav-link"
+            activeStyle={{ fontWeight: "bold" }}
+            //to="/mensaje2"
+            to="/mensaje2/Mensaje Nro 2/orangered"
+          >
             Mensaje 2
           </NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link" activeStyle={{ fontWeight: 'bold' }} to="/mensaje3">
+          <NavLink
+            className="nav-link"
+            activeStyle={{ fontWeight: "bold" }}
+            //to="/mensaje3"
+            to="/mensaje3/Mensaje Nro 3/blue"
+          >
             Mensaje 3
           </NavLink>
         </li>

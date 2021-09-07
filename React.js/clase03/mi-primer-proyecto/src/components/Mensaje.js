@@ -14,7 +14,10 @@ function Mensaje(props) {
 
   // DESTRUCTURING OBJECT:
   // Se puede asignar a variables los valores pasados por propiedades
-  let { titulo, colorFondo } = props;
+  //let { titulo, colorFondo } = props;
+
+  // TOMAR LAS PROPIEDADES DE LA RUTA
+  let { titulo, colorFondo } = props.match.params;
 
   return (
     <div className="Mensaje">
