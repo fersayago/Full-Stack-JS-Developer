@@ -1,0 +1,8 @@
+.Mensaje {
+  text-align: left;
+}
+
+.Mensaje .jumbotron {
+  background-color: #818;
+  color: white;
+}
