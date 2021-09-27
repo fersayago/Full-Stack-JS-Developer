@@ -6,3 +6,7 @@
 .Estructura hr {
   background-color: #ddd;
 }
+
+.Estructura .table th, .Estructura .table td {
+  vertical-align: middle;
+}
